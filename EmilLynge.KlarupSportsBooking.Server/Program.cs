@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmilLynge.KlarupSportsBooking.Business
+namespace EmilLynge.KlarupSportsBooking.Server
 {
     class Program
     {

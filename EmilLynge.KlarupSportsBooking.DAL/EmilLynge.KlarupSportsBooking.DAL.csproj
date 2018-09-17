@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>65cee9a3-d205-4654-b099-d12cf68cb0a7</ProjectGuid>
+    <ProjectGuid>e678213f-8c81-402d-8e9b-dd44f8101ca2</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EmilLynge.KlarupSportsBooking.Business</RootNamespace>
-    <AssemblyName>EmilLynge.KlarupSportsBooking.Business</AssemblyName>
+    <RootNamespace>EmilLynge.KlarupSportsBooking.DAL</RootNamespace>
+    <AssemblyName>EmilLynge.KlarupSportsBooking.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
