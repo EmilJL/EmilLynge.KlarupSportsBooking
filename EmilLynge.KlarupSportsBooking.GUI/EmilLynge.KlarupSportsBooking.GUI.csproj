@@ -102,5 +102,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmilLynge.KlarupSportsBooking.Business\EmilLynge.KlarupSportsBooking.Business.csproj">
+      <Project>{65cee9a3-d205-4654-b099-d12cf68cb0a7}</Project>
+      <Name>EmilLynge.KlarupSportsBooking.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmilLynge.KlarupSportsBooking.DAL\EmilLynge.KlarupSportsBooking.DAL.csproj">
+      <Project>{e678213f-8c81-402d-8e9b-dd44f8101ca2}</Project>
+      <Name>EmilLynge.KlarupSportsBooking.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

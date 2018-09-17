@@ -34,7 +34,15 @@ namespace EmilLynge.KlarupSportsBooking.DAL.EF
 
         public DateTime? FridayStartTime { get; set; }
 
-        public DateTime? FriedayEndTime { get; set; }
+        public DateTime? FridayEndTime { get; set; }
+
+        public DateTime? SaturdayStartTime { get; set; }
+
+        public DateTime? SaturdayEndTime { get; set; }
+
+        public DateTime? SundayStartTime { get; set; }
+
+        public DateTime? SundayEndTime { get; set; }
 
         public DateTime StartDay { get; set; }
 
@@ -46,9 +54,9 @@ namespace EmilLynge.KlarupSportsBooking.DAL.EF
 
         public int CompanyId { get; set; }
 
-        public virtual Company Company { get; set; }
+        public virtual Activity Activity { get; set; }
 
-        public virtual Company Company1 { get; set; }
+        public virtual Company Company { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ConfirmedOngoingBooking> ConfirmedOngoingBookings { get; set; }

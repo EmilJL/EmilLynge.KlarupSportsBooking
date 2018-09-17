@@ -48,11 +48,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActitiviesHandler.cs" />
+    <Compile Include="AdminHandler.cs" />
+    <Compile Include="ClosedDaysHandler.cs" />
+    <Compile Include="CompanyHandler.cs" />
+    <Compile Include="DBHandler.cs" />
+    <Compile Include="HallHandler.cs" />
+    <Compile Include="OngoingBookingsHandler.cs" />
+    <Compile Include="OpeningHoursHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SectionsHandler.cs" />
+    <Compile Include="SingleBookingsHandler.cs" />
+    <Compile Include="StatisticsHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmilLynge.KlarupSportsBooking.DAL\EmilLynge.KlarupSportsBooking.DAL.csproj">
+      <Project>{e678213f-8c81-402d-8e9b-dd44f8101ca2}</Project>
+      <Name>EmilLynge.KlarupSportsBooking.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -27,6 +27,16 @@ namespace EmilLynge.KlarupSportsBooking.DAL.EF
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Activity>()
+                .HasMany(e => e.OngoingBookings)
+                .WithRequired(e => e.Activity)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Activity>()
+                .HasMany(e => e.SingleBookings)
+                .WithRequired(e => e.Activity)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Admin>()
                 .HasMany(e => e.ConfirmedOngoingBookings)
                 .WithRequired(e => e.Admin)
@@ -45,25 +55,11 @@ namespace EmilLynge.KlarupSportsBooking.DAL.EF
             modelBuilder.Entity<Company>()
                 .HasMany(e => e.OngoingBookings)
                 .WithRequired(e => e.Company)
-                .HasForeignKey(e => e.ActivityId)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Company>()
-                .HasMany(e => e.OngoingBookings1)
-                .WithRequired(e => e.Company1)
-                .HasForeignKey(e => e.CompanyId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Company>()
                 .HasMany(e => e.SingleBookings)
                 .WithRequired(e => e.Company)
-                .HasForeignKey(e => e.ActivityId)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Company>()
-                .HasMany(e => e.SingleBookings1)
-                .WithRequired(e => e.Company1)
-                .HasForeignKey(e => e.CompanyId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Hall>()

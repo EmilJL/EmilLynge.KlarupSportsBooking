@@ -26,9 +26,9 @@ namespace EmilLynge.KlarupSportsBooking.DAL.EF
 
         public int CompanyId { get; set; }
 
-        public virtual Company Company { get; set; }
+        public virtual Activity Activity { get; set; }
 
-        public virtual Company Company1 { get; set; }
+        public virtual Company Company { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ConfirmedSingleBooking> ConfirmedSingleBookings { get; set; }
