@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActitiviesHandler.cs" />
+    <Compile Include="ActivitiesHandler.cs" />
     <Compile Include="AdminHandler.cs" />
     <Compile Include="ClosedDaysHandler.cs" />
     <Compile Include="CompanyHandler.cs" />

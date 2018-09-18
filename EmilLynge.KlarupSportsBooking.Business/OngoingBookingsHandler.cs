@@ -17,6 +17,14 @@ namespace EmilLynge.KlarupSportsBooking.Business
         {
             return Model.OngoingBookings.ToList();
         }
+        public List<OngoingBooking> GetAllAcceptedOngoingBookings()
+        {
+            return Model.OngoingBookings.Where(b => b.IsConfirmed == true).ToList();
+        }
+        public List<OngoingBooking> GetAllPendingOngoingBookings()
+        {
+            return Model.OngoingBookings.Where(b => b.IsConfirmed == false).ToList();
+        }
         public bool AddOngoingBooking(OngoingBooking ongoingBooking)
         {
             Model.OngoingBookings.Add(ongoingBooking);
@@ -32,20 +40,8 @@ namespace EmilLynge.KlarupSportsBooking.Business
             var onBook = Model.OngoingBookings.Find(id);
             onBook.StartDay = ongoingBooking.StartDay;
             onBook.EndDay = ongoingBooking.EndDay;
-
-            onBook.MondayStartTime = ongoingBooking.MondayStartTime;
-            onBook.MondayEndTime = ongoingBooking.MondayEndTime;
-            onBook.TuesdayStartTime = ongoingBooking.TuesdayStartTime;
-            onBook.TuesdayEndTime = ongoingBooking.TuesdayEndTime;
-            onBook.WednesdayStartTime = ongoingBooking.WednesdayStartTime;
-            onBook.WednesdayEndTime = ongoingBooking.WednesdayEndTime;
-            onBook.ThursdayStartTime = ongoingBooking.ThursdayStartTime;
-            onBook.ThursdayEndTime = ongoingBooking.ThursdayEndTime;
-            onBook.FridayStartTime = ongoingBooking.FridayStartTime;
-            onBook.FridayEndTime = ongoingBooking.FridayEndTime;
-            onBook.SaturdayStartTime = ongoingBooking.SaturdayStartTime;
-            onBook.SaturdayEndTime = ongoingBooking.SaturdayEndTime;
-            onBook.SundayStartTime = ongoingBooking.SundayStartTime;
+            onBook.StartTime = ongoingBooking.StartTime;
+            onBook.EndTime = ongoingBooking.EndTime;
 
             return SaveChangesToDB();
         }
@@ -63,6 +59,15 @@ namespace EmilLynge.KlarupSportsBooking.Business
 
             return SaveChangesToDB();
         }
-
+        public int GetAmountOfDaysForOngoingBooking(int id)
+        {
+            var booking = GetOngoingBooking(id);
+            return (booking.EndDay - booking.StartDay).Days / 7;
+        }
+        public double GetAmountOfTimeForOngoingBooking(int id)
+        {
+            var booking = GetOngoingBooking(id);
+            return GetAmountOfDaysForOngoingBooking(id) * (booking.StartTime - booking.EndTime).TotalHours;
+        }
     }
 }

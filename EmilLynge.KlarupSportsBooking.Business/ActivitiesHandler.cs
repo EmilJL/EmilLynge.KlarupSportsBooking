@@ -7,7 +7,7 @@ using EmilLynge.KlarupSportsBooking.DAL.EF;
 
 namespace EmilLynge.KlarupSportsBooking.Business
 {
-    public class ActitiviesHandler : DBHandler
+    public class ActivitiesHandler : DBHandler
     {
         public Activity GetActivity(int id)
         {

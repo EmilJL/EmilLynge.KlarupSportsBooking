@@ -32,19 +32,23 @@ namespace EmilLynge.KlarupSportsBooking.Business
         {
             return 2.2;
         }
-        public Company GetCompanyThatUsesTheHallMost()
-        {
-            //var sBookingTotalTime = Model.SingleBookings.Where(b => b.IsConfirmed == true).GroupBy(b => b.CompanyId);
-            //foreach (var group in sBookingTotalTime)
-            //{
-            //    gro
-            //}
-            //var oBookings = Model.OngoingBookings.Where(oB => oB.IsConfirmed == true);
-            //var k = sBookings.OrderBy(b => b.EndTime - b.StartTime).Last();
-            //foreach (SingleBooking booking in sBookings)
-            //{
+        //public Company GetCompanyThatUsesTheHallMost()
+        //{
+        //    //var sBookingTotalTime = Model.SingleBookings.Where(b => b.IsConfirmed == true).GroupBy(b => b.CompanyId);
+        //    //foreach (var group in sBookingTotalTime)
+        //    //{
+        //    //    gro
+        //    //}
+        //    //var oBookings = Model.OngoingBookings.Where(oB => oB.IsConfirmed == true);
+        //    //var k = sBookings.OrderBy(b => b.EndTime - b.StartTime).Last();
+        //    //foreach (SingleBooking booking in sBookings)
+        //    //{
                 
-            //}
-        }
+        //    //}
+        //}
+        //public List<Activity> GetOrderedListOfMostUsedActivities()
+        //{
+        //    var sBookings
+        //}
     }
 }

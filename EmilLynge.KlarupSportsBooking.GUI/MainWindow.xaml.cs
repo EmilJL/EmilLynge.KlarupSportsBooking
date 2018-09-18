@@ -22,15 +22,18 @@ namespace EmilLynge.KlarupSportsBooking.GUI
     public partial class MainWindow : Window
     {
         LoginHandler loginHandler;
+        AdminHandler adminHandler;
         public MainWindow()
         {
             InitializeComponent();
             loginHandler = new LoginHandler();
+            adminHandler = new AdminHandler();
         }
 
         private void btnLoginAsCompany_Click(object sender, RoutedEventArgs e)
         {
-            if (loginHandler.loginAsCompany(txtCompanyNameLogin.Text, pwBCompanyPassword.Password))
+            int id = loginHandler.loginAsCompany(txtCompanyNameLogin.Text, pwBCompanyPassword.Password);
+            if (id != -1)
             {
 
             }
@@ -42,13 +45,18 @@ namespace EmilLynge.KlarupSportsBooking.GUI
 
         private void btnLoginAsAdmin_Click(object sender, RoutedEventArgs e)
         {
-            if (loginHandler.loginAsAdmin(txtAdminEmailLogin.Text, pwBAdminPassword.Password))
-            {
+            int id = loginHandler.loginAsAdmin(txtAdminEmailLogin.Text, pwBAdminPassword.Password);
 
+            if (id != -1)
+            {
+                var adminWindow = new AdminWindow(adminHandler.GetAdmin(id));
+                adminWindow.Owner = this;
+                adminWindow.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Email and/or password is incorrect. Try again!");
+                pwBAdminPassword.Password = "";
             }
         }
     }

@@ -17,6 +17,14 @@ namespace EmilLynge.KlarupSportsBooking.Business
         {
             return Model.SingleBookings.ToList();
         }
+        public List<SingleBooking> GetAllAcceptedSingleBookings()
+        {
+            return Model.SingleBookings.Where(b => b.IsConfirmed == true).ToList();
+        }
+        public List<SingleBooking> GetAllPendingSingleBookings()
+        {
+            return Model.SingleBookings.Where(b => b.IsConfirmed == false).ToList();
+        }
         public bool AddSingleBooking(SingleBooking singleBooking)
         {
             Model.SingleBookings.Add(singleBooking);
