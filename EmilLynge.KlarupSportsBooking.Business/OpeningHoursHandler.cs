@@ -17,11 +17,11 @@ namespace EmilLynge.KlarupSportsBooking.Business
         {
             return Model.OpeningHours.ToList();
         }
-        //public bool AddOngoingBooking(OngoingBooking ongoingBooking)
-        //{
-        //    Model.OngoingBookings.Add(ongoingBooking);
-        //    return SaveChangesToDB();
-        //}
+        public bool AddOpeningHour(OpeningHour openingHour)
+        {
+            Model.OpeningHours.Add(openingHour);
+            return SaveChangesToDB();
+        }
         //public bool RemoveOngoingBooking(int id)
         //{
         //    Model.OngoingBookings.Remove(Model.OngoingBookings.Find(id));

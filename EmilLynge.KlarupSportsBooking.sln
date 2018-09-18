@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmilLynge.KlarupSportsBooki
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmilLynge.KlarupSportsBooking.Server", "EmilLynge.KlarupSportsBooking.Server\EmilLynge.KlarupSportsBooking.Server.csproj", "{8D09921D-3C90-4008-9213-FB1603717FC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillDBWithDummyData", "FillDBWithDummyData\FillDBWithDummyData.csproj", "{16724BE6-27F2-4675-B8E4-BD9207E92E4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8D09921D-3C90-4008-9213-FB1603717FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D09921D-3C90-4008-9213-FB1603717FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D09921D-3C90-4008-9213-FB1603717FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16724BE6-27F2-4675-B8E4-BD9207E92E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16724BE6-27F2-4675-B8E4-BD9207E92E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16724BE6-27F2-4675-B8E4-BD9207E92E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16724BE6-27F2-4675-B8E4-BD9207E92E4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
