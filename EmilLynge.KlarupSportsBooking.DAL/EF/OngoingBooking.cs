@@ -16,33 +16,11 @@ namespace EmilLynge.KlarupSportsBooking.DAL.EF
 
         public int Id { get; set; }
 
-        public DateTime? MondayStartTime { get; set; }
+        public int DayOfWeek { get; set; }
 
-        public DateTime? MondayEndTime { get; set; }
+        public DateTime StartTime { get; set; }
 
-        public DateTime? TuesdayStartTime { get; set; }
-
-        public DateTime? TuesdayEndTime { get; set; }
-
-        public DateTime? WednesdayStartTime { get; set; }
-
-        public DateTime? WednesdayEndTime { get; set; }
-
-        public DateTime? ThursdayStartTime { get; set; }
-
-        public DateTime? ThursdayEndTime { get; set; }
-
-        public DateTime? FridayStartTime { get; set; }
-
-        public DateTime? FridayEndTime { get; set; }
-
-        public DateTime? SaturdayStartTime { get; set; }
-
-        public DateTime? SaturdayEndTime { get; set; }
-
-        public DateTime? SundayStartTime { get; set; }
-
-        public DateTime? SundayEndTime { get; set; }
+        public DateTime EndTime { get; set; }
 
         public DateTime StartDay { get; set; }
 

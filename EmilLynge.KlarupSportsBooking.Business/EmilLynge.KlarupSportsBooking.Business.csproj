@@ -53,7 +53,9 @@
     <Compile Include="ClosedDaysHandler.cs" />
     <Compile Include="CompanyHandler.cs" />
     <Compile Include="DBHandler.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="HallHandler.cs" />
+    <Compile Include="LoginHandler.cs" />
     <Compile Include="OngoingBookingsHandler.cs" />
     <Compile Include="OpeningHoursHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

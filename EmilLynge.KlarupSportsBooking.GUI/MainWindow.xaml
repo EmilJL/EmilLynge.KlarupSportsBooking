@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmilLynge.KlarupSportsBooking.GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="270.331" Width="574.282">
     <Grid>
-        
+        <Frame Content="" HorizontalAlignment="Left" Height="127" Margin="0,120,-4.4,-3.8" VerticalAlignment="Top" Width="574" BorderThickness="0,0,0,1" BorderBrush="#FF1D1B1B">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA076FF"/>
+                    <GradientStop Color="#FF7E0000" Offset="1"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+        </Frame>
+
+        <Frame Content="" HorizontalAlignment="Left" Height="127" Margin="0,0,-4.4,0" VerticalAlignment="Top" Width="574" BorderThickness="0,0,0,1" BorderBrush="#FF1D1B1B">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFAD76FF" Offset="1"/>
+                    <GradientStop Color="#FF3B51D0"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+        </Frame>
+
+        <Button x:Name="btnLoginAsCompany" Content="Login" HorizontalAlignment="Left" Margin="437,61,0,0" VerticalAlignment="Top" Width="108" Height="37" FontSize="16" FontWeight="ExtraBold" Background="#FF68F2AC" BorderBrush="#FF060404" BorderThickness="2" Click="btnLoginAsCompany_Click"/>
+        <Label Content="Company Login" HorizontalAlignment="Left" Margin="13,0,0,0" VerticalAlignment="Top" Width="522" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Label Content="Admin Login" HorizontalAlignment="Left" Margin="13,129,0,0" VerticalAlignment="Top" Width="522" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btnLoginAsAdmin" Content="Login" HorizontalAlignment="Left" Margin="437,181,0,0" VerticalAlignment="Top" Width="108" Height="37" BorderBrush="Black" Background="#FFFF3838" FontSize="16" BorderThickness="2" FontWeight="ExtraBold" Click="btnLoginAsAdmin_Click"/>
+        <Label Content="Company Name:" HorizontalAlignment="Left" Margin="23,48,0,0" VerticalAlignment="Top" Width="122" FontWeight="Bold"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="23,82,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="23,169,0,0" VerticalAlignment="Top" Width="122" FontWeight="Bold"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="23,201,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold"/>
+        <TextBox x:Name="txtAdminEmailLogin" HorizontalAlignment="Left" Height="23" Margin="150,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtCompanyNameLogin" HorizontalAlignment="Left" Height="23" Margin="150,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"/>
+        <PasswordBox x:Name="pwBAdminPassword" HorizontalAlignment="Left" Height="24" Margin="150,203,0,0" VerticalAlignment="Top" Width="227"/>
+        <PasswordBox x:Name="pwBCompanyPassword" HorizontalAlignment="Left" Height="24" Margin="150,84,0,0" VerticalAlignment="Top" Width="227"/>
+
     </Grid>
 </Window>
