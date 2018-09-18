@@ -33,7 +33,7 @@
         <Label Content="Password:" HorizontalAlignment="Left" Margin="23,82,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold"/>
         <Label Content="Email:" HorizontalAlignment="Left" Margin="23,169,0,0" VerticalAlignment="Top" Width="122" FontWeight="Bold"/>
         <Label Content="Password:" HorizontalAlignment="Left" Margin="23,201,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold"/>
-        <TextBox x:Name="txtAdminEmailLogin" HorizontalAlignment="Left" Height="23" Margin="150,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtAdminEmailLogin" HorizontalAlignment="Left" Height="23" Margin="150,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"/>
         <TextBox x:Name="txtCompanyNameLogin" HorizontalAlignment="Left" Height="23" Margin="150,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"/>
         <PasswordBox x:Name="pwBAdminPassword" HorizontalAlignment="Left" Height="24" Margin="150,203,0,0" VerticalAlignment="Top" Width="227"/>
         <PasswordBox x:Name="pwBCompanyPassword" HorizontalAlignment="Left" Height="24" Margin="150,84,0,0" VerticalAlignment="Top" Width="227"/>

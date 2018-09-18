@@ -149,6 +149,7 @@ namespace FillDBWithDummyData
             activitiesHandler.AddActivity(activity7);
             activitiesHandler.AddActivity(activity8);
 
+            Console.ReadLine();
             //Company company = new Company()
             //{
             //    Name = "AspIT",

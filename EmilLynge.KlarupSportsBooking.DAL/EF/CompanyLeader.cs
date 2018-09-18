@@ -6,7 +6,6 @@ namespace EmilLynge.KlarupSportsBooking.DAL.EF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("CompanyLeader")]
     public partial class CompanyLeader
     {
         public int Id { get; set; }

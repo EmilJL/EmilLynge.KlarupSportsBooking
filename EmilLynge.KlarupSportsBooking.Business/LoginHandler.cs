@@ -20,6 +20,10 @@ namespace EmilLynge.KlarupSportsBooking.Business
             {
                 return -1;
             }
+            catch (InvalidOperationException)
+            {
+                return -1;
+            }
         }
         public int loginAsCompany(string name, string password)
         {

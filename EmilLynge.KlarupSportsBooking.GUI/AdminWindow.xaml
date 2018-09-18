@@ -31,37 +31,37 @@
 
         <Separator HorizontalAlignment="Left" Height="100" Margin="-24,219,0,0" VerticalAlignment="Top" Width="1023"/>
         <DataGrid x:Name="dtgRequestedSingleBookings" HorizontalAlignment="Left" Height="200" Margin="23,43,0,0" VerticalAlignment="Top" Width="230"/>
-        <Label Content="Requested single bookings" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" Width="320" FontWeight="Black"/>
+        <Label Content="Reserveret enkelt bookning" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" Width="320" FontWeight="Black"/>
         <DataGrid x:Name="dtgRequestedOngoingBookings" HorizontalAlignment="Left" Height="200" Margin="23,313,0,0" VerticalAlignment="Top" Width="230"/>
-        <Label Content="Requested ongoing bookings" HorizontalAlignment="Left" Margin="23,280,0,0" VerticalAlignment="Top" Width="320" FontWeight="Black"/>
-        <Button x:Name="btnAcceptSingleBookingRequest" Content="Accept" HorizontalAlignment="Left" Margin="274,43,0,0" VerticalAlignment="Top" Width="75" Click="btnAcceptSingleBookingRequest_Click" BorderBrush="Black"/>
-        <Button x:Name="btnAcceptOngoingBookingRequest" Content="Accept" HorizontalAlignment="Left" Margin="274,313,0,0" VerticalAlignment="Top" Width="75" Click="btnAcceptOngoingBookingRequest_Click" BorderBrush="Black"/>
-        <Button x:Name="btnDeleteSingleBookingRequest" Content="Delete" HorizontalAlignment="Left" Margin="274,84,0,0" VerticalAlignment="Top" Width="75" Click="btnDeleteSingleBookingRequest_Click" BorderBrush="Black"/>
-        <Button x:Name="btnDeleteOngoingBookingRequest" Content="Delete" HorizontalAlignment="Left" Margin="274,353,0,0" VerticalAlignment="Top" Width="75" Click="btnDeleteOngoingBookingRequest_Click" BorderBrush="Black"/>
+        <Label Content="Forespurgt løbende booking" HorizontalAlignment="Left" Margin="23,280,0,0" VerticalAlignment="Top" Width="320" FontWeight="Black"/>
+        <Button x:Name="btnAcceptSingleBookingRequest" Content="Accepter" HorizontalAlignment="Left" Margin="274,43,0,0" VerticalAlignment="Top" Width="75" Click="btnAcceptSingleBookingRequest_Click" BorderBrush="Black"/>
+        <Button x:Name="btnAcceptOngoingBookingRequest" Content="Accepter" HorizontalAlignment="Left" Margin="274,313,0,0" VerticalAlignment="Top" Width="75" Click="btnAcceptOngoingBookingRequest_Click" BorderBrush="Black"/>
+        <Button x:Name="btnDeleteSingleBookingRequest" Content="Slet" HorizontalAlignment="Left" Margin="274,84,0,0" VerticalAlignment="Top" Width="75" Click="btnDeleteSingleBookingRequest_Click" BorderBrush="Black"/>
+        <Button x:Name="btnDeleteOngoingBookingRequest" Content="Slet" HorizontalAlignment="Left" Margin="274,353,0,0" VerticalAlignment="Top" Width="75" Click="btnDeleteOngoingBookingRequest_Click" BorderBrush="Black"/>
         <DataGrid x:Name="dtgMostUsedActivitiesOrdered" HorizontalAlignment="Left" Height="200" Margin="419,313,0,0" VerticalAlignment="Top" Width="186"/>
-        <Label Content="Most used activities" HorizontalAlignment="Left" Margin="378,280,0,0" VerticalAlignment="Top" Width="269" HorizontalContentAlignment="Center" FontWeight="Black"/>
+        <Label Content="Mest frekvente aktiviteter" HorizontalAlignment="Left" Margin="378,280,0,0" VerticalAlignment="Top" Width="269" HorizontalContentAlignment="Center" FontWeight="Black"/>
         <Label Content="Company that uses the hall the most" HorizontalAlignment="Left" Margin="399,178,0,0" VerticalAlignment="Top" Width="225" FontWeight="Black"/>
-        <Label Content="Add new activity" HorizontalAlignment="Left" Margin="697,280,0,0" VerticalAlignment="Top" Width="221" HorizontalContentAlignment="Center" FontWeight="Black"/>
-        <Label Content="Name:" HorizontalAlignment="Left" Margin="663,340,0,0" VerticalAlignment="Top" Width="108" HorizontalContentAlignment="Right" FontWeight="Bold"/>
-        <Label Content="Sections required:" HorizontalAlignment="Left" Margin="664,382,0,0" VerticalAlignment="Top" Width="107" HorizontalContentAlignment="Right" FontWeight="Bold"/>
+        <Label Content="Tilføj ny aktivitet" HorizontalAlignment="Left" Margin="697,280,0,0" VerticalAlignment="Top" Width="221" HorizontalContentAlignment="Center" FontWeight="Black"/>
+        <Label Content="Navn:" HorizontalAlignment="Left" Margin="663,340,0,0" VerticalAlignment="Top" Width="108" FontWeight="Bold"/>
+        <Label Content="Antal sektioner påkrævet:" HorizontalAlignment="Left" Margin="664,382,0,0" VerticalAlignment="Top" Width="158" FontWeight="Bold"/>
         <Label x:Name="lblCompanyThatUsesHallMost" Content="" HorizontalAlignment="Left" Margin="419,218,0,0" VerticalAlignment="Top" Width="186" BorderBrush="Black" BorderThickness="1" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="txtNewActivityName" HorizontalAlignment="Left" Height="23" Margin="782,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
-        <ComboBox x:Name="cboNewActivitySectionsRequired" HorizontalAlignment="Left" Margin="782,386,0,0" VerticalAlignment="Top" Width="34"/>
-        <Button x:Name="btnAddNewActivity" Content="Add" HorizontalAlignment="Left" Margin="758,443,0,0" VerticalAlignment="Top" Width="117" Height="45" FontSize="21" FontWeight="SemiBold" BorderBrush="Black" BorderThickness="2" Click="btnAddNewActivity_Click"/>
-        <Label Content="Add new company" HorizontalAlignment="Left" Margin="664,10,0,0" VerticalAlignment="Top" Width="326" FontWeight="Black" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="txtNewActivityName" HorizontalAlignment="Left" Height="23" Margin="721,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208"/>
+        <ComboBox x:Name="cboNewActivitySectionsRequired" HorizontalAlignment="Left" Margin="892,386,0,0" VerticalAlignment="Top" Width="34"/>
+        <Button x:Name="btnAddNewActivity" Content="Tilføj" HorizontalAlignment="Left" Margin="758,443,0,0" VerticalAlignment="Top" Width="117" Height="45" FontSize="21" FontWeight="SemiBold" BorderBrush="Black" BorderThickness="2" Click="btnAddNewActivity_Click"/>
+        <Label Content="Tilføj ny virksomhed" HorizontalAlignment="Left" Margin="664,10,0,0" VerticalAlignment="Top" Width="326" FontWeight="Black" HorizontalContentAlignment="Center"/>
         <DatePicker x:Name="dtpPercentageOfHallUsageForDate" HorizontalAlignment="Left" Margin="501,80,0,0" VerticalAlignment="Top"/>
-        <Label Content="Name:" HorizontalAlignment="Left" Margin="665,47,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Right" FontWeight="Bold"/>
-        <Label Content="Address:" HorizontalAlignment="Left" Margin="665,75,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Right" FontWeight="Bold"/>
-        <Label Content="Phone:" HorizontalAlignment="Left" Margin="664,103,0,0" VerticalAlignment="Top" Width="76" HorizontalContentAlignment="Right" FontWeight="Bold"/>
+        <Label Content="Navn:" HorizontalAlignment="Left" Margin="665,47,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Right" FontWeight="Bold"/>
+        <Label Content="Addresse:" HorizontalAlignment="Left" Margin="665,75,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Right" FontWeight="Bold"/>
+        <Label Content="Tlf:" HorizontalAlignment="Left" Margin="664,103,0,0" VerticalAlignment="Top" Width="76" HorizontalContentAlignment="Right" FontWeight="Bold"/>
         <Label Content="Email:" HorizontalAlignment="Left" Margin="665,131,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Right" FontWeight="Bold"/>
-        <Label Content="Password:" HorizontalAlignment="Left" Margin="665,161,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Right" FontWeight="Bold"/>
-        <Label Content="Percentage of hall usage" HorizontalAlignment="Left" Margin="387,10,0,0" VerticalAlignment="Top" Width="252" FontWeight="Black" HorizontalContentAlignment="Center"/>
-        <Label Content="Range:" HorizontalAlignment="Left" Margin="406,45,0,0" VerticalAlignment="Top" Width="67" FontWeight="Bold" HorizontalContentAlignment="Right"/>
-        <Label Content="Date:" HorizontalAlignment="Left" Margin="406,78,0,0" VerticalAlignment="Top" Width="67" FontWeight="Bold" HorizontalContentAlignment="Right"/>
+        <Label Content="Kode:" HorizontalAlignment="Left" Margin="665,161,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Right" FontWeight="Bold"/>
+        <Label Content="Procentdel af hal brugt i givent tidsinterval" HorizontalAlignment="Left" Margin="387,10,0,0" VerticalAlignment="Top" Width="252" FontWeight="Black" HorizontalContentAlignment="Center" FontSize="11"/>
+        <Label Content="Interval:" HorizontalAlignment="Left" Margin="406,45,0,0" VerticalAlignment="Top" Width="67" FontWeight="Bold" HorizontalContentAlignment="Right"/>
+        <Label Content="Dato:" HorizontalAlignment="Left" Margin="406,78,0,0" VerticalAlignment="Top" Width="67" FontWeight="Bold" HorizontalContentAlignment="Right"/>
         <ComboBox x:Name="cboPercentageOfHallUsageRange" HorizontalAlignment="Left" Margin="501,49,0,0" VerticalAlignment="Top" Width="101"/>
-        <Button x:Name="btnGetPercentageOfHallUsage" Content="Get" HorizontalAlignment="Left" Margin="418,118,0,0" VerticalAlignment="Top" Width="71" Height="30" FontSize="16" FontWeight="SemiBold" BorderBrush="Black" BorderThickness="2" Click="btnGetPercentageOfHallUsage_Click"/>
+        <Button x:Name="btnGetPercentageOfHallUsage" Content="Hent" HorizontalAlignment="Left" Margin="418,118,0,0" VerticalAlignment="Top" Width="71" Height="30" FontSize="16" FontWeight="SemiBold" BorderBrush="Black" BorderThickness="2" Click="btnGetPercentageOfHallUsage_Click"/>
         <Label x:Name="lblPercentageOfHallUsage" Content="" HorizontalAlignment="Left" Margin="503,119,0,0" VerticalAlignment="Top" Width="99" BorderBrush="Black" BorderThickness="1" HorizontalContentAlignment="Center"/>
-        <Button x:Name="btnAddNewCompany" Content="Add" HorizontalAlignment="Left" Margin="758,204,0,0" VerticalAlignment="Top" Width="117" Height="45" FontSize="21" FontWeight="SemiBold" BorderBrush="Black" BorderThickness="2" Click="btnAddNewCompany_Click"/>
+        <Button x:Name="btnAddNewCompany" Content="Tilføj" HorizontalAlignment="Left" Margin="758,204,0,0" VerticalAlignment="Top" Width="117" Height="45" FontSize="21" FontWeight="SemiBold" BorderBrush="Black" BorderThickness="2" Click="btnAddNewCompany_Click"/>
         <TextBox x:Name="txtNewCompanyName" HorizontalAlignment="Left" Height="23" Margin="772,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208"/>
         <TextBox x:Name="txtNewCompanyAddress" HorizontalAlignment="Left" Height="23" Margin="772,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208"/>
         <TextBox x:Name="txtNewCompanyPhoneNumber" HorizontalAlignment="Left" Height="23" Margin="772,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>

@@ -35,7 +35,7 @@ namespace EmilLynge.KlarupSportsBooking.GUI
             int id = loginHandler.loginAsCompany(txtCompanyNameLogin.Text, pwBCompanyPassword.Password);
             if (id != -1)
             {
-
+                /// REMEMBER TO CHANGE COMPANY TO COMPANIES IN DB
             }
             else
             {

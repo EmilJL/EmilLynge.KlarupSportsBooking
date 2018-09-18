@@ -34,6 +34,7 @@ namespace EmilLynge.KlarupSportsBooking.GUI
             oBHandler = new OngoingBookingsHandler();
             sBHandler = new SingleBookingsHandler();
             companyHandler = new CompanyHandler();
+            activityHandler = new ActivitiesHandler();
 
             dtgRequestedOngoingBookings.ItemsSource = oBHandler.GetAllPendingOngoingBookings();
             dtgRequestedSingleBookings.ItemsSource = sBHandler.GetAllPendingSingleBookings();
@@ -88,6 +89,7 @@ namespace EmilLynge.KlarupSportsBooking.GUI
                 sBHandler.RemoveSingleBooking(sB.Id);
                 dtgRequestedSingleBookings.SelectedItem = null;
                 dtgRequestedSingleBookings.ItemsSource = sBHandler.GetAllPendingSingleBookings();
+                MessageBox.Show("Booking deleted.");
             }
             catch (ArgumentNullException)
             {
@@ -103,6 +105,7 @@ namespace EmilLynge.KlarupSportsBooking.GUI
                 oBHandler.RemoveOngoingBooking(oB.Id);
                 dtgRequestedOngoingBookings.SelectedItem = null;
                 dtgRequestedOngoingBookings.ItemsSource = oBHandler.GetAllPendingOngoingBookings();
+                MessageBox.Show("Booking deleted.");
             }
             catch (ArgumentNullException)
             {
@@ -125,7 +128,21 @@ namespace EmilLynge.KlarupSportsBooking.GUI
                 Email = txtNewCompanyEmail.Text,
                 Password = txtNewCompanyPassword.Text
             };
-            companyHandler.AddCompany(company);
+            try
+            {
+                companyHandler.AddCompany(company);
+                MessageBox.Show("Foreningen er blevet tilføjet!");
+                txtNewCompanyAddress.Text = "";
+                txtNewCompanyName.Text = "";
+                txtNewCompanyPhoneNumber.Text = "";
+                txtNewCompanyEmail.Text = "";
+                txtNewCompanyPassword.Text = "";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Noget af informationen, der er angivet, er fejlagtigt. Prøv igen!");
+            }
+           
         }
         // REMEMBER TO ADD VALIDATION HERE AND ABOVE
         private void btnAddNewActivity_Click(object sender, RoutedEventArgs e)
@@ -135,7 +152,18 @@ namespace EmilLynge.KlarupSportsBooking.GUI
                 Name = txtNewActivityName.Text,
                 SectionsRequired = (int) cboNewActivitySectionsRequired.SelectedValue
             };
-            activityHandler.AddActivity(activity);
+            try
+            {
+                activityHandler.AddActivity(activity);
+                txtNewActivityName.Text = "";
+                MessageBox.Show("Aktiviteten er blevet tilføjet!");
+            }
+            catch (ArgumentException)
+            {
+                // REMEMBER TO IMPLEMENT THIS EXCEPTION
+                MessageBox.Show("Aktivitetsnavnet må ikke indeholde tal, eller være identisk til et, der allerede eksisterer.");
+            }
+            
         }
     }
 }
