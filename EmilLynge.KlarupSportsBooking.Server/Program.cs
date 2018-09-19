@@ -10,6 +10,8 @@ namespace EmilLynge.KlarupSportsBooking.Server
     {
         static void Main(string[] args)
         {
+            Server server = new Server(9999);
+            server.Start();
         }
     }
 }

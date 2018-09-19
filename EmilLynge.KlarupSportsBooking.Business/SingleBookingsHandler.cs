@@ -57,5 +57,10 @@ namespace EmilLynge.KlarupSportsBooking.Business
 
             return SaveChangesToDB();
         }
+        public double GetTimeForSingleBooking(int id)
+        {
+            var sB = Model.SingleBookings.Find(id);
+            return (sB.EndTime - sB.StartTime).TotalHours;
+        }
     }
 }

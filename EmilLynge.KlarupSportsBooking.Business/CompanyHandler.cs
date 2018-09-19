@@ -37,5 +37,10 @@ namespace EmilLynge.KlarupSportsBooking.Business
             comp.PhoneNumber = company.PhoneNumber;
             return SaveChangesToDB();
         }
+        //REMEMBER TO FIX DB SO CONFIRMED ONGOING BOOKINGS HAS COMPANY ID
+        //public DateTime getTimeForNextBookingForCompany(int id)
+        //{
+        //    DateTime nextOngoingBookingStart = Model.ConfirmedOngoingBookings.Where(oB => oB.)
+        //}
     }
 }
