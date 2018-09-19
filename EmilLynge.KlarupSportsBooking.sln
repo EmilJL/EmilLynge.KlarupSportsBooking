@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmilLynge.KlarupSportsBooki
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillDBWithDummyData", "FillDBWithDummyData\FillDBWithDummyData.csproj", "{16724BE6-27F2-4675-B8E4-BD9207E92E4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmilLynge.KlarupSportsBooking.Tester", "EmilLynge.KlarupSportsBooking.Tester\EmilLynge.KlarupSportsBooking.Tester.csproj", "{993A53D5-6A22-4E94-8248-E55A55E59FBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{16724BE6-27F2-4675-B8E4-BD9207E92E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16724BE6-27F2-4675-B8E4-BD9207E92E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16724BE6-27F2-4675-B8E4-BD9207E92E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{993A53D5-6A22-4E94-8248-E55A55E59FBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{993A53D5-6A22-4E94-8248-E55A55E59FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{993A53D5-6A22-4E94-8248-E55A55E59FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{993A53D5-6A22-4E94-8248-E55A55E59FBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

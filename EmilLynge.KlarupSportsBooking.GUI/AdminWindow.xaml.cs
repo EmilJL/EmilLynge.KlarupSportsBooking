@@ -26,6 +26,7 @@ namespace EmilLynge.KlarupSportsBooking.GUI
         Admin admin;
         CompanyHandler companyHandler;
         ActivitiesHandler activityHandler;
+        StatisticsHandler sHandler = new StatisticsHandler();
         int[] sections;
         public AdminWindow(Admin admin)
         {
@@ -46,11 +47,12 @@ namespace EmilLynge.KlarupSportsBooking.GUI
 
        
         }
-        //protected void SetCompanyMostUsingHall()
-        //{
-        //    var k = oBHandler.GetAllAcceptedOngoingBookings();
+        protected void SetCompanyMostUsingHall()
+        {
+            var k = sHandler.GetCompanyThatUsesTheHallMost();
+            lblCompanyThatUsesHallMost.Content = k.Name;
 
-        //}
+        }
         private void btnAcceptSingleBookingRequest_Click(object sender, RoutedEventArgs e)
         {
             try

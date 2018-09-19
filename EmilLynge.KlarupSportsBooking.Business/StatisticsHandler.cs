@@ -212,6 +212,7 @@ namespace EmilLynge.KlarupSportsBooking.Business
         /// <returns></returns>
         public double GetHallTimeUseForDay(DateTime date)
         {
+            /// THIS ONLY WORKS AS LONG AS THERE IS NO MULTIPLE BOOKINGS AT THE SAME TIME
             SingleBookingsHandler singleBookingsHandler = new SingleBookingsHandler();
             OngoingBookingsHandler ongoingBookingsHandler = new OngoingBookingsHandler();
             var hallTimeUseForTimeSpanSingles = Model.SingleBookings.Where(s => s.IsConfirmed == true && s.StartTime.Date == date.Date).Select(sTime => singleBookingsHandler.GetTimeForSingleBooking(sTime.Id)).Sum();

@@ -15,6 +15,7 @@ namespace EmilLynge.KlarupSportsBooking.Server
     {
         private JsonSerializer jsonSerializer;
         private StatisticsHandler handler;
+        private CompanyHandler cHandler = new CompanyHandler();
         /// <summary>
         /// The TcpListener used to receive the clients.
         /// </summary>
@@ -82,18 +83,20 @@ namespace EmilLynge.KlarupSportsBooking.Server
         /// <summary>
         /// Method used to handle the request from the client.
         /// </summary>
-        /// <param name="request">The request from the client. Must be CSV and atleast two values.</param>
+        /// <param name="request"></param>
         /// <returns>Returns the response to the client</returns>
         private string Handle(string request)
         {
             string[] requestSplitted = request.Split(',');
-            switch (requestSplitted[0])
+            switch (int.Parse(requestSplitted[0]))
             {
-                case "1":
+                case 1:
                     //INSERT CODE THAT RETURNS NEXT AVAILABLE BOOKING
                     break;
-                case "2":
-
+                    //RETURNS THE START AND END TIME FOR THE NEXT BOOKING OF A COMPANY BASED ON GIVEN ID, AS STRING, SEPERATED BY ','
+                case 2:
+                    int compId = cHandler.GetCompanyIdFromName(requestSplitted[1]);
+                    return "Start time: " + cHandler.GetNextBookingStartTimeForCompany(compId).ToString() + ", End Time: " + cHandler.GetNextBookingEndTimeForCompany(compId).ToString();
                 default:
                     break;
             }

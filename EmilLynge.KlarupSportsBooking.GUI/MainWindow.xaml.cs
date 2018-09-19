@@ -23,11 +23,13 @@ namespace EmilLynge.KlarupSportsBooking.GUI
     {
         LoginHandler loginHandler;
         AdminHandler adminHandler;
+        CompanyHandler companyHandler;
         public MainWindow()
         {
             InitializeComponent();
             loginHandler = new LoginHandler();
             adminHandler = new AdminHandler();
+            companyHandler = new CompanyHandler();
         }
 
         private void btnLoginAsCompany_Click(object sender, RoutedEventArgs e)
@@ -35,7 +37,9 @@ namespace EmilLynge.KlarupSportsBooking.GUI
             int id = loginHandler.loginAsCompany(txtCompanyNameLogin.Text, pwBCompanyPassword.Password);
             if (id != -1)
             {
-                /// REMEMBER TO CHANGE COMPANY TO COMPANIES IN DB
+                var companyWindow = new CompanyWindow(companyHandler.GetCompany(id));
+                companyWindow.Owner = this;
+                companyWindow.ShowDialog();
             }
             else
             {

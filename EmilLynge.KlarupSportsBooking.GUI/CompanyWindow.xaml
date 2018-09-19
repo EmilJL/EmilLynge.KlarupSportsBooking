@@ -1,0 +1,53 @@
+﻿<Window x:Class="EmilLynge.KlarupSportsBooking.GUI.CompanyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmilLynge.KlarupSportsBooking.GUI"
+        mc:Ignorable="d"
+        Title="CompanyWindow" Height="329.872" Width="634">
+    <Grid Margin="0,0,0.2,-0.2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="118*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Anmod om enkel booking" HorizontalAlignment="Left" Margin="0,13,0,0" VerticalAlignment="Top" Width="304" Grid.ColumnSpan="2" HorizontalContentAlignment="Center"/>
+        <Label Content="Anmod om fast booking" HorizontalAlignment="Left" Margin="53,13,-0.2,0" VerticalAlignment="Top" Width="320" Grid.Column="1" HorizontalContentAlignment="Center"/>
+        <Separator HorizontalAlignment="Left" Height="100" Margin="1,-22,-22.8,0" VerticalAlignment="Top" Width="447" Grid.Column="1">
+            <Separator.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.LayoutTransform>
+        </Separator>
+        <DatePicker x:Name="dpSingleBooking" HorizontalAlignment="Left" Margin="120,73,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dato:" HorizontalAlignment="Left" Margin="34,71,0,0" VerticalAlignment="Top" Width="63"/>
+        <Label Content="Start Tid:" HorizontalAlignment="Left" Margin="34,122,0,0" VerticalAlignment="Top" Width="63"/>
+        <ComboBox x:Name="cboSingleBookingStartTimeFull" HorizontalAlignment="Left" Margin="109,127,0,0" VerticalAlignment="Top" Width="60"/>
+        <ComboBox x:Name="cboSingleBookingStartTimeHalf" HorizontalAlignment="Left" Margin="193,127,0,0" VerticalAlignment="Top" Width="59"/>
+        <Label Content="Slut Tid:" HorizontalAlignment="Left" Margin="34,164,0,0" VerticalAlignment="Top" Width="63"/>
+        <ComboBox x:Name="cboSingleBookingEndTimeFull" HorizontalAlignment="Left" Margin="109,169,0,0" VerticalAlignment="Top" Width="60"/>
+        <ComboBox x:Name="cboSingleBookingEndTimeHalf" HorizontalAlignment="Left" Margin="193,169,0,0" VerticalAlignment="Top" Width="59"/>
+        <DatePicker x:Name="dpOngoingBookingStartDate" HorizontalAlignment="Left" Margin="187,76,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="Start Dato:" HorizontalAlignment="Left" Margin="101,75,0,0" VerticalAlignment="Top" Width="81" Grid.Column="1"/>
+        <Label Content="Start Tid:" HorizontalAlignment="Left" Margin="101,143,0,0" VerticalAlignment="Top" Width="63" Grid.Column="1"/>
+        <ComboBox x:Name="cboOngoingBookingStartTimeFull" HorizontalAlignment="Left" Margin="176,146,0,0" VerticalAlignment="Top" Width="60" Grid.Column="1"/>
+        <ComboBox x:Name="cboOngoingBookingStartTimeHalf" HorizontalAlignment="Left" Margin="260,146,0,0" VerticalAlignment="Top" Width="59" Grid.Column="1"/>
+        <Label Content="Slut Tid:" HorizontalAlignment="Left" Margin="101,175,0,0" VerticalAlignment="Top" Width="63" Grid.Column="1"/>
+        <ComboBox x:Name="cboOngoingBookingEndTimeFull" HorizontalAlignment="Left" Margin="176,178,0,0" VerticalAlignment="Top" Width="60" Grid.Column="1"/>
+        <ComboBox x:Name="cboOngoingBookingEndTimeHalf" HorizontalAlignment="Left" Margin="260,178,0,0" VerticalAlignment="Top" Width="59" Grid.Column="1"/>
+        <Label Content="Slut Dato:" HorizontalAlignment="Left" Margin="101,106,0,0" VerticalAlignment="Top" Width="63" Grid.Column="1"/>
+        <DatePicker x:Name="dpOngoingBookingEndDate" HorizontalAlignment="Left" Margin="187,108,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button x:Name="btnRequestSingleBooking" Content="Anmod" HorizontalAlignment="Left" Margin="94,259,0,0" VerticalAlignment="Top" Width="75" Click="btnRequestSingleBooking_Click"/>
+        <Button x:Name="btnRequestOngoingBooking" Content="Anmod" HorizontalAlignment="Left" Margin="176,259,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="btnRequestOngoingBooking_Click"/>
+        <Label Content="OBS: Slut datoen skal være samme ugedag som startdatoen!" Grid.Column="1" HorizontalAlignment="Left" Margin="66,50,0,0" VerticalAlignment="Top" FontSize="10" FontWeight="Bold"/>
+        <Label Content="Aktivitet:" HorizontalAlignment="Left" Margin="34,214,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboActivitySingleBooking" HorizontalAlignment="Left" Margin="102,218,0,0" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Aktivitet:" HorizontalAlignment="Left" Margin="98,214,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <ComboBox x:Name="cboActivityOngoingBooking" HorizontalAlignment="Left" Margin="166,218,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
+
+    </Grid>
+</Window>

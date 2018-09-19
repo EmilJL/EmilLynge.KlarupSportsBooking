@@ -13,6 +13,10 @@ namespace EmilLynge.KlarupSportsBooking.Business
         {
             return Model.Activities.Find(id);
         }
+        public Activity GetActivityFromName(string name)
+        {
+            return Model.Activities.Where(a => a.Name == name).FirstOrDefault();
+        }
         public List<Activity> GetAllActivities()
         {
             return Model.Activities.ToList();
